@@ -1,0 +1,20 @@
+jwt:
+  secret: 'long-string-random-hjksfgjdghkdghdkjfg'
+
+
+server:
+  port: 8181
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user-service?useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+       dialect: org.hibernate.dialect.MySQL8Dialect
